@@ -11,7 +11,7 @@ class App extends Component {
     return <Switch>
       <Route exact path={`/`} component={Landing} />
       <Route exact path={`/about`} component={AboutUs} />
-      <Route exact path={`/products/:id`} component={Products} />
+      <Route path={`/products`} component={Products} />
       <Route exact path={`/posts/:category_id/:title`} component={Posts} />
     </Switch>
   }

@@ -1,10 +1,15 @@
 import React from 'react'
+import { Switch, Route } from 'react-router-dom'
+
+import List from './list'
+import Single from './single'
 
 class ProductsPage extends React.Component {
   render() {
-    return <div>
-      <h1>Product page for { this.props.match.params.id }</h1>
-    </div>
+    return <Switch>
+      <Route exact path={`/products`} component={List} />
+      <Route exact path={`/products/:id`} component={Single} />
+    </Switch>
   }
 }
 
